@@ -9,8 +9,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        crimson: "#d21f46",
+      },
+      animation: {
+        scroll: "scroll var(--animation-duration) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(calc(-100px * var(--num-images)))" },
+        },
       },
     },
   },
