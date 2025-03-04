@@ -6,6 +6,7 @@ const images = [
   { src: "/tech/css.png", alt: "css" },
   { src: "/tech/next-js.png", alt: "next-js" },
   { src: "/tech/js.png", alt: "js" },
+  { src: "/tech/typescript.png", alt: "typescript" },
   { src: "/tech/node.png", alt: "node" },
   { src: "/tech/react.png", alt: "react" },
   { src: "/tech/postgresql.png", alt: "postgresql" },
