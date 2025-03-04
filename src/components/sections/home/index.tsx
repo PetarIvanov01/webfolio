@@ -1,4 +1,8 @@
-import Image from "next/image";
+import { FileDown } from 'lucide-react';
+import Socials from '@/components/shared/social';
+
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -17,13 +21,14 @@ export default function Home() {
           </span>
         </p>
 
-        <div className="md:mt-auto mt-6">
-          <a
-            href="#projects"
-            className="inline-block px-4 py-2 md:px-6 md:py-3 bg-[#599cee9f] text-white font-semibold rounded-md shadow-md hover:bg-[#4c85d0] transition"
-          >
-            See My Projects
-          </a>
+        <div className="md:mt-auto mt-6 flex-col md:flex-row flex items-center md:gap-4 gap-2">
+          <Link href="/files/resume.pdf" className="flex-shrink" target="blank">
+            <button className="hover:bg-[#535a5e] hover:bg-opacity-35 transition duration-700 flex items-center w-fit border-[#535a5e] bg-opacity-45 border-2 px-3 py-1 md:px-5 pd:py-2 text-white font-semibold md:text-base text-sm rounded-md">
+              <span className="font-semibold">Resume</span>
+              <FileDown className="ml-2 size-[18px] md:size-5" />
+            </button>
+          </Link>
+          <Socials />
         </div>
       </div>
       <div className="w-44 md:w-64 flex-shrink-0">
@@ -32,7 +37,7 @@ export default function Home() {
           alt="profile image"
           width={300}
           height={300}
-          className="rounded-full"
+          className="rounded-full border border-[#535a5e]"
         />
       </div>
     </section>
